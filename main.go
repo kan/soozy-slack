@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"net/url"
@@ -14,9 +15,17 @@ type Config struct {
 	Token string `toml:"token"`
 }
 
+type successResponse struct {
+	Code int `json:"success"`
+}
+
+type errorResponse struct {
+	Message string `json:"error"`
+}
+
 func printErr(w http.ResponseWriter, message string) {
 	w.Header().Set("Content-Type", "application/json")
-	fmt.Fprintf(w, "{ \"error\": \"%s\" }", message)
+	json.NewEncoder(w).Encode(&errorResponse{message})
 }
 
 func invite(config Config) func(w http.ResponseWriter, r *http.Request) {
@@ -44,7 +53,7 @@ func invite(config Config) func(w http.ResponseWriter, r *http.Request) {
 		}
 
 		w.Header().Set("Content-Type", "application/json")
-		fmt.Fprintf(w, "{ \"success\": 1 }")
+		json.NewEncoder(w).Encode(&successResponse{1})
 		fmt.Println("invite: " + email)
 	}
 }
