@@ -6,6 +6,25 @@ h1 {
     font-size: 1.5em;
 }
 
+h2 {
+    font-size: 1.2em;
+    border-bottom: 1px dashed;
+}
+
+p {
+    line-height: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: #33f;
+    margin: 0 0.2em 0 0.2em;
+}
+
+a:hover {
+    border-bottom: 1px dotted #33f;
+}
+
 div.success {
     color: #01df01;
 }
