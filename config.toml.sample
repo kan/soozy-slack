@@ -1,0 +1,2 @@
+host = "example.slack.com"
+token = "input your slack token"

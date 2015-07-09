@@ -1,0 +1,15 @@
+body {
+    padding: 2em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+div.success {
+    color: #01df01;
+}
+
+div.error {
+    color: #df0101;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Soozy Slack</title>
+
+    <link rel="stylesheet" href="/css/pure.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="icon" href="/img/favicon.gif">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script>
+      $(function(){
+        $('form').on('submit', function(ev) {
+          $('form input, button').prop('disabled', true);
+          $.ajax({
+            url: '/invite',
+            success: function(data) {
+              if (data.success == 1) {
+                $('#message')
+                  .attr('class', 'success')
+                  .text('invite succeed');
+              } else {
+                $('#message')
+                  .attr('class', 'error')
+                  .text(data.error);
+              }
+              $('form input, button').prop('disabled', false);
+            },
+            data: { email: $('#email').val() },
+            type: 'POST'
+          });
+          return false;
+        });
+      });
+    </script>
+
+    <!--
+    <meta property="og:title" content="fushihara.net" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fushihara.net/" />
+    <meta property="og:image" content="https://fushihara.net/img/ogp.png" />
+    <meta property="og:site_name" content="fushihara.net" />
+    <meta property="og:description" content="ふしはらかんについての諸々" />
+    -->
+
+  </head>
+  <body>
+    <h1>#Soozy</h1>
+
+    <form class="pure-form" method="POST" action="/invite">
+      <fieldset>
+        <legend>soozyに参加する</legend>
+
+        <input type="email" id="email" name="email" placeholder="Email" required />
+
+        <button type="submit" class="pure-button pure-button-primary">Invite Me</button>
+      <fieldset>
+      <div id="message"></div>
+    </form>
+  </body>
+</html>
