@@ -10,6 +10,7 @@ import (
 
 type Config struct {
 	Host  string `toml:"host"`
+	Port  string `toml:"port"`
 	Token string `toml:"token"`
 }
 
@@ -57,5 +58,5 @@ func main() {
 
 	http.Handle("/", http.FileServer(http.Dir("./assets/")))
 	http.HandleFunc("/invite", invite(config))
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":"+config.Port, nil)
 }
