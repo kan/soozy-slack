@@ -28,7 +28,7 @@ func printErr(w http.ResponseWriter, message string) {
 	json.NewEncoder(w).Encode(&errorResponse{message})
 }
 
-func invite(config Config) func(w http.ResponseWriter, r *http.Request) {
+func InviteFunc(config Config) func(w http.ResponseWriter, r *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != "POST" {
 			printErr(w, "not allow GET reuqest")
@@ -66,6 +66,6 @@ func main() {
 	}
 
 	http.Handle("/", http.FileServer(http.Dir("./assets/")))
-	http.HandleFunc("/invite", invite(config))
+	http.HandleFunc("/invite", InviteFunc(config))
 	http.ListenAndServe(":"+config.Port, nil)
 }
