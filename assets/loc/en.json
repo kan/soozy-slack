@@ -1,14 +1,14 @@
 {
     "en": {
         "whatsisthis": "Whats is this?",
-        "eligibility": "Eligibility one",
-        "howtojoin": "How to join us",
-        "contact": "Other contacts",
-        "description": "#soozy had originally had channel in IRC of freenode, talking around the topic related to programming, including that of perl in the center of Japan's perl community.  In June 2015, <a href=\"https://slack.com/\">Slack</a> and began to migrate to the new form to take advantage of.",
-        "about": "Nothing in particular. Anyone I welcome. However, since the channels are talking about the contents related to the programming in the Japanese often, please put that point you know. <br />2015/07 now, there seems to be a channel of more than 10 things around as follows.",
-        "soozy": "(such as the topic of the main channel .perl)",
-        "join": "When you put the e-mail address in the form below press the \"Invite Me\" button, you will receive an invitation to address.",
+        "eligibility": "Who can join?",
+        "howtojoin": "How to join?",
+        "contact": "Contacts",
+        "description": "#soozy was originally a channel on IRC at freenode, where people from the Japanese Perl community talked about programming.<br />In June 2015 we moved this over to <a href=\"https://slack.com/\">Slack</a>.",
+        "about": "Anyone! But please note that the topic of conversations are mostly programming related, and that Japanese is used in most channels. If you are comfortable with this, you are welcome to join",
+        "soozy": "(kine of the main channel about perl)",
+        "join": "Please input your e-mail address in the form below and press the \"Invite Me\" button. Then, you will receive an invitation via e-mail.",
         "form-label": "join soozy",
-        "address": "This site<a href=\"https://github.com/kan/soozy-slack\">github</a>manages the code. PR to the contents, Issue are welcome. <br /> If you have any inquiry matters, <a href=\"mailto:kan.fushihara@gmail.com\">kan.fushihara@gmail.com</a> please contact."
+        "address": "The source code for this site is hosted on <a href=\"https://github.com/kan/soozy-slack\">github</a>. PRs and issues are most welcome.<br />If you have any questions, please contact <a href=\"mailto:kan.fushihara@gmail.com\">kan.fushihara@gmail.com</a>."
     }
 }
