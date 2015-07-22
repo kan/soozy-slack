@@ -23,7 +23,12 @@
     <script>
       function localize() {
         $('.loc').each(function() {
-          $(this).html($(this).data('lid').toLocaleString());
+          var lid = $(this).data('lid');
+          var html = lid.toLocaleString();
+
+          if (lid !== html) {
+            $(this).html($(this).data('lid').toLocaleString());
+          }
         });
       }
       $(function(){
@@ -48,6 +53,10 @@
           });
           return false;
         });
+        if (String.locale == "") {
+          // set default locale
+          String.locale = "en";
+        }
         localize();
       });
     </script>
