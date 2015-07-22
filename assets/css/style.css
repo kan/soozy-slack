@@ -32,3 +32,11 @@ div.success {
 div.error {
     color: #df0101;
 }
+
+.loc-menu {
+    text-align: right;
+}
+
+.loc-button {
+    font-size: 80%;
+}

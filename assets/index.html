@@ -29,6 +29,15 @@
           if (lid !== html) {
             $(this).html($(this).data('lid').toLocaleString());
           }
+
+          if (String.locale == "en") {
+            $('#loc-en-btn').addClass('pure-button-disabled');
+            $('#loc-ja-btn').removeClass('pure-button-disabled');
+          }
+          else {
+            $('#loc-ja-btn').addClass('pure-button-disabled');
+            $('#loc-en-btn').removeClass('pure-button-disabled');
+          }
         });
       }
       $(function(){
@@ -53,6 +62,10 @@
           });
           return false;
         });
+        $('button.loc-button').on('click', function() {
+          String.locale = $(this).data('locale');
+          localize();
+        });
         if (String.locale == "") {
           // set default locale
           String.locale = "en";
@@ -69,6 +82,11 @@
 
   </head>
   <body>
+    <div class="loc-menu">
+      <button id="loc-ja-btn" data-locale="ja" class="pure-button loc-button">Japanese</button>
+      <button id="loc-en-btn" data-locale="en" class="pure-button loc-button">English</button>
+    </div>
+
     <h1>#Soozy</h1>
 
     <h2 class="loc" data-lid="whatsisthis">これはなに?</h2>
