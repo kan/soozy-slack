@@ -1,0 +1,14 @@
+{
+    "ja": {
+        "whatsisthis": "これは何?",
+        "eligibility": "参加資格的なもの",
+        "howtojoin": "参加する方法",
+        "contact": "その他、連絡先",
+        "description": "#soozy は元々IRCのfreenodeにあったチャンネルで、日本のperlコミュニティを中心にperlのことを含むプログラミングに関わる話題を中心に話し合っていました。<br />2015年6月に、<a href=\"https://slack.com/\">Slack</a>を利用する新しい形に移行し始めました。",
+        "about": "特にありません。どなたでも歓迎します。ただ、プログラミングに関わる内容を日本語で話しているチャンネルが多いので、その点ご承知置き下さい。<br />2015/07現在、以下のようなものを中心に10以上のチャンネルがあるようです。",
+        "soozy": "(メインチャンネル。perlの話題など)",
+        "join": "以下のフォームにメールアドレスを入れて「Invite Me」ボタンを押すと、アドレス宛てに招待メールが届きます。",
+        "form-label": "soozyに参加する",
+        "address": "このサイトは<a href=\"https://github.com/kan/soozy-slack\">github</a>でコードを管理しています。内容へのPR, Issueは大歓迎です。<br />問い合わせ事項がありましたら、<a href=\"mailto:kan.fushihara@gmail.com\">kan.fushihara@gmail.com</a>までご連絡下さい。"
+    }
+}

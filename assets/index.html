@@ -16,8 +16,16 @@
     <link rel="icon" href="/img/favicon.gif">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
+    <link rel="localizations" hreflang="ja" href="/loc/ja.json" type="application/x-l10n+json">
+    <link rel="localizations" hreflang="en" href="/loc/en.json" type="application/x-l10n+json">
     <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/js/l10n.min.js"></script>
     <script>
+      function localize() {
+        $('.loc').each(function() {
+          $(this).html($(this).data('lid').toLocaleString());
+        });
+      }
       $(function(){
         $('form').on('submit', function(ev) {
           $('form input, button').prop('disabled', true);
@@ -40,6 +48,7 @@
           });
           return false;
         });
+        localize();
       });
     </script>
 
@@ -53,29 +62,29 @@
   <body>
     <h1>#Soozy</h1>
 
-    <h2>これはなに?</h2>
+    <h2 class="loc" data-lid="whatsisthis">これはなに?</h2>
 
-    <p>#soozy は元々IRCのfreenodeにあったチャンネルで、日本のperlコミュニティを中心にperlのことを含むプログラミングに関わる話題を中心に話し合っていました。<br />2015年6月に、<a href="https://slack.com/">Slack</a>を利用する新しい形に移行し始めました。</p>
+    <p class="loc" data-lid="description">#soozy は元々IRCのfreenodeにあったチャンネルで、日本のperlコミュニティを中心にperlのことを含むプログラミングに関わる話題を中心に話し合っていました。<br />2015年6月に、<a href="https://slack.com/">Slack</a>を利用する新しい形に移行し始めました。</p>
 
-    <h2>参加資格的なもの</h2>
+    <h2 class="loc" data-lid="eligibility">参加資格的なもの</h2>
 
-    <p>特にありません。どなたでも歓迎します。ただ、プログラミングに関わる内容を日本語で話しているチャンネルが多いので、その点ご承知置き下さい。<br />2015/07現在、以下のようなものを中心に10以上のチャンネルがあるようです。</p>
+    <p class="loc" data-lid="about">特にありません。どなたでも歓迎します。ただ、プログラミングに関わる内容を日本語で話しているチャンネルが多いので、その点ご承知置き下さい。<br />2015/07現在、以下のようなものを中心に10以上のチャンネルがあるようです。</p>
 
     <ul>
-      <li>#soozy (メインチャンネル。perlの話題など)</li>
+      <li>#soozy <span class="loc" data-lid="soozy">(メインチャンネル。perlの話題など)</span></li>
       <li>#java</li>
       <li>#js</li>
       <li>#golang</li>
       <li>#vim</li>
     </ul>
 
-    <h2>参加する方法</h2>
+    <h2 class="loc" data-lid="howtojoin">参加する方法</h2>
 
-    <p>以下のフォームにメールアドレスを入れて「Invite Me」ボタンを押すと、アドレス宛てに招待メールが届きます。</p>
+    <p class="loc" data-lid="join">以下のフォームにメールアドレスを入れて「Invite Me」ボタンを押すと、アドレス宛てに招待メールが届きます。</p>
 
     <form class="pure-form" method="POST" action="/invite">
       <fieldset>
-        <legend>soozyに参加する</legend>
+        <legend class="loc" data-lid="form-label">soozyに参加する</legend>
 
         <input type="email" id="email" name="email" placeholder="Email" required />
 
@@ -84,7 +93,7 @@
       <div id="message"></div>
     </form>
 
-    <h2>その他、連絡先</h2>
+    <h2 class="loc" data-lid="contact">その他、連絡先</h2>
 
     <p>このサイトは<a href="https://github.com/kan/soozy-slack">github</a>でコードを管理しています。内容へのPR, Issueは大歓迎です。<br />問い合わせ事項がありましたら、<a href="mailto:kan.fushihara@gmail.com">kan.fushihara@gmail.com</a>までご連絡下さい。</p>
   </body>

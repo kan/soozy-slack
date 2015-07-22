@@ -1,0 +1,14 @@
+{
+    "en": {
+        "whatsisthis": "Whats is this?",
+        "eligibility": "Eligibility one",
+        "howtojoin": "How to join us",
+        "contact": "Other contacts",
+        "description": "#soozy had originally had channel in IRC of freenode, talking around the topic related to programming, including that of perl in the center of Japan's perl community.  In June 2015, <a href=\"https://slack.com/\">Slack</a> and began to migrate to the new form to take advantage of.",
+        "about": "Nothing in particular. Anyone I welcome. However, since the channels are talking about the contents related to the programming in the Japanese often, please put that point you know. <br />2015/07 now, there seems to be a channel of more than 10 things around as follows.",
+        "soozy": "(such as the topic of the main channel .perl)",
+        "join": "When you put the e-mail address in the form below press the \"Invite Me\" button, you will receive an invitation to address.",
+        "form-label": "join soozy",
+        "address": "This site<a href=\"https://github.com/kan/soozy-slack\">github</a>manages the code. PR to the contents, Issue are welcome. <br /> If you have any inquiry matters, <a href=\"mailto:kan.fushihara@gmail.com\">kan.fushihara@gmail.com</a> please contact."
+    }
+}
