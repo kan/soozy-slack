@@ -6,7 +6,6 @@
         "contact": "Contacts",
         "description": "#soozy was originally a channel on IRC at freenode, where people from the Japanese Perl community talked about programming.<br />In June 2015 we moved this over to <a href=\"https://slack.com/\">Slack</a>.",
         "about": "Anyone! But please note that the topic of conversations are mostly programming related, and that Japanese is used in most channels. If you are comfortable with this, you are welcome to join",
-        "soozy": "(kine of the main channel about perl)",
         "join": "Please input your e-mail address in the form below and press the \"Invite Me\" button. Then, you will receive an invitation via e-mail.",
         "form-label": "join soozy",
         "address": "The source code for this site is hosted on <a href=\"https://github.com/kan/soozy-slack\">github</a>. PRs and issues are most welcome.<br />If you have any questions, please contact <a href=\"mailto:kan.fushihara@gmail.com\">kan.fushihara@gmail.com</a>."
